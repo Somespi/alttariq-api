@@ -1,15 +1,13 @@
 from supabase import create_client, Client
-import time
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import openai
 import google.generativeai as genai
-import base64
-import random
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-
-genai.configure(api_key="AIzaSyCbJxmfSa9Q-RwqISvbab2iw52dk3TyLC8")
+genai.configure(api_key=os.getenv("API_KEY"))
 
 
 def ask_gemini(prompt, first_message, model_message):
