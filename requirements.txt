@@ -1,0 +1,5 @@
+google-generativeai
+supabase
+fastapi
+uvicorn
+openai
