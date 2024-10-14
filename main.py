@@ -4,10 +4,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import google.generativeai as genai
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
-genai.configure(api_key=os.getenv("API_KEY"))
+
+genai.configure(api_key="AIzaSyB2fIJE1mLKETpcqDkwQ1LHNaK5cc0IWeg")
 
 
 def ask_gemini(prompt, first_message, model_message):
